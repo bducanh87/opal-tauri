@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="plate" id="plate">
+  <div class="glass" id="glass">
+    <div class="glass-wall" id="wall"></div>
+    <div class="glass-theme" id="theme"></div>
+    <div class="glass-sheen"></div>
+    <div class="glass-grain"></div>
+  </div>
+  <!-- The 1px rim is vector, so the rounded corners are antialiased
+       evenly (a CSS mask ring stair-stepped on the curves). -->
+  <svg class="rim" id="rim" aria-hidden="true">
+    <defs>
+      <linearGradient id="rim-glass" x1=".29" y1=".05" x2=".71" y2=".95">
+        <stop offset="0" style="stop-color: var(--rim0)"/>
+        <stop offset=".30" style="stop-color: var(--rim1)"/>
+        <stop offset=".64" style="stop-color: var(--rim2)"/>
+        <stop offset="1" style="stop-color: var(--rim3)"/>
+      </linearGradient>
+      <linearGradient id="rim-opal" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#7ff0e0"/>
+        <stop offset=".3" stop-color="#9d8cff"/>
+        <stop offset=".55" stop-color="#ff9fd8"/>
+        <stop offset=".8" stop-color="#ffe29a"/>
+        <stop offset="1" stop-color="#7ff0e0"/>
+        <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="16s" repeatCount="indefinite"/>
+      </linearGradient>
+    </defs>
+    <rect class="rim-r"/>
+  </svg>
+  <div class="plate-body" id="body"></div>
+  <div class="ctl" id="ctl"></div>
+  <div class="grip" id="grip" title="Resize"></div>
+</div>
+<div class="menu" id="menu" hidden></div>
+<div class="toast" id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "ytm",
+  "description": "YouTube Music window: may only report the playing track and queue",
+  "windows": [
+    "ytm"
+  ],
+  "local": false,
+  "remote": {
+    "urls": [
+      "https://music.youtube.com/*"
+    ]
+  },
+  "permissions": [
+    "allow-ytm-report"
+  ]
+}

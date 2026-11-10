@@ -1,0 +1,61 @@
+[package]
+name = "opal-tauri"
+version = "0.1.0"
+edition = "2024"
+description = "Opal (Tauri edition): Rust core with a web (HTML/CSS) interface."
+license = "MIT"
+
+[[bin]]
+name = "opal-tauri"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+chrono-tz = "0.10"
+# theme.rs (shared with the egui edition) uses egui's colour types only.
+egui = { version = "0.31", default-features = false }
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "bmp", "webp"] }
+base64 = "0.22"
+ureq = "2"
+rfd = "0.15"
+sysinfo = { version = "0.33", default-features = false, features = ["system", "disk", "network"] }
+
+[dependencies.windows]
+version = "0.58"
+features = [
+    "Foundation",
+    "Foundation_Collections",
+    "Media_Control",
+    "Win32_Media_Audio",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_Variant",
+    "Storage_Streams",
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_Graphics_Dwm",
+    "Win32_Security",
+    "Win32_System_Com",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Registry",
+    "Win32_System_Threading",
+    "Win32_UI_Controls",
+    "Win32_UI_HiDpi",
+    "Win32_UI_Shell",
+    "Win32_UI_Shell_Common",
+    "Win32_UI_WindowsAndMessaging",
+]
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+strip = true
+
+[profile.dev.package."*"]
+opt-level = 2
