@@ -180,4 +180,4 @@ Có. Thời tiết lấy từ Open-Meteo (định vị theo mạng nếu để t
 
 Opal được viết lại và phát triển từ **Lumen 0.1.0**, một ứng dụng phát hành theo giấy phép MIT. Thuật toán âm lịch theo công bố của Hồ Ngọc Đức.
 
-Mã nguồn Opal phát hành theo giấy phép MIT, xem file [LICENSE](LICENSE). File đó cũng ghi rõ phần kế thừa từ Lumen.
+Mã nguồn Opal phát hành theo giấy phép MIT, xem file [LICENSE](LICENSE). Phần kế thừa từ Lumen được ghi trong file [NOTICE](NOTICE).

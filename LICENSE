@@ -19,20 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
---------------------------------------------------------------------------------
-
-Third-party notice: Lumen
-
-Opal began as a Rust rewrite of Lumen 0.1.0 ("lumen-launcher", described by its
-authors as "a glassmorphic app launcher that lives on your Windows wallpaper").
-Its themes, widget designs, glass rendering recipe and the film-grain texture
-(ui/grain.png in the Tauri edition) are derived from that application.
-
-Lumen 0.1.0 declares the MIT license in its package.json. The distribution this
-work was based on shipped no separate license file and no copyright notice, so
-no author name can be reproduced here; all rights in the original work remain
-with the Lumen authors under the MIT license above.
-
-The Vietnamese lunar calendar code follows the algorithm published by
-Hồ Ngọc Đức.
